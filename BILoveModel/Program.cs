@@ -10,6 +10,8 @@ namespace BILoveModel
     {
         static void Main(string[] args)
         {
+            InternetManager m = new InternetManager();
+            m.VKAuthorization("", "");
         }
     }
 }

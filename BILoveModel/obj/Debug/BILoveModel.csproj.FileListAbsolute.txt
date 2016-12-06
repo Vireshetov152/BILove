@@ -1,1 +1,14 @@
 \\mac\home\documents\visual studio 2015\Projects\BILove\BILoveModel\bin\Debug\BILoveModel.exe.config
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\BILoveModel.exe.config
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\BILoveModel.exe
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\BILoveModel.pdb
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\HtmlAgilityPack.dll
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\Newtonsoft.Json.dll
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\VkNet.dll
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\HtmlAgilityPack.pdb
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\HtmlAgilityPack.xml
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\Newtonsoft.Json.xml
+\\Mac\Home\Desktop\BILove\BILoveModel\bin\Debug\VkNet.xml
+\\Mac\Home\Desktop\BILove\BILoveModel\obj\Debug\BILoveModel.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\BILove\BILoveModel\obj\Debug\BILoveModel.exe
+\\Mac\Home\Desktop\BILove\BILoveModel\obj\Debug\BILoveModel.pdb
