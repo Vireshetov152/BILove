@@ -95,6 +95,56 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\art.png" />
+    <Resource Include="Pictures\dancing.png" />
+    <Resource Include="Pictures\food.png" />
+    <Resource Include="Pictures\gambling.png" />
+    <Resource Include="Pictures\games.png" />
+    <Resource Include="Pictures\music.png" />
+    <Resource Include="Pictures\photography.png" />
+    <Resource Include="Pictures\science.png" />
+    <Resource Include="Pictures\shopping.png" />
+    <Resource Include="Pictures\sports.png" />
+    <Resource Include="Pictures\technology.png" />
+    <Resource Include="Pictures\travelling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\art_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\dancing_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\food_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\gambling_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\games_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\music_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\science_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\photography_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\shopping_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\sports_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\technology_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\travelling_color.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

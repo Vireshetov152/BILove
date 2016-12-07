@@ -1,1 +1,15 @@
 \\mac\home\documents\visual studio 2015\Projects\BILove\BILove\bin\Debug\BILove.exe.config
+\\Mac\Home\Desktop\BILove\BILove\bin\Debug\BILove.exe.config
+\\Mac\Home\Desktop\BILove\BILove\bin\Debug\BILove.exe
+\\Mac\Home\Desktop\BILove\BILove\bin\Debug\BILove.pdb
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\BILove.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\MainWindow.g.cs
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\App.g.cs
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\BILove_MarkupCompile.cache
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\BILove_MarkupCompile.lref
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\MainWindow.baml
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\BILove.g.resources
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\BILove.Properties.Resources.resources
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\BILove.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\BILove.exe
+\\Mac\Home\Desktop\BILove\BILove\obj\Debug\BILove.pdb
