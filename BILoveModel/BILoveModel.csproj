@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InternetManager.cs" />
+    <Compile Include="ViewModel.cs" />
     <Compile Include="VKApiManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,8 +11,20 @@ namespace BILoveModel
 {
     public class InternetManager
     {
-        const string apiKey = "zK7bftiQKXwBOYZsIFIpiOfc_xuzBWDb";
-        
+        private const string apiKey = "zK7bftiQKXwBOYZsIFIpiOfc_xuzBWDb";
+        private Dictionary<string, string> infoDict = new Dictionary<string, string>();
+
+        // Getting user info vk and 'interests page'
+        public void GetInterests(List<string> interests) 
+        {
+            infoDict.Add("interests", string.Join(",", interests.ToArray()));
+        }
+
+        public void GetVKInfo(string name, string photoUrl)
+        {
+            infoDict.Add("userName", name);
+            infoDict.Add("userPhoto", photoUrl);
+        }
         static string GetUsers()
         {
             return string.Format("https://api.mlab.com/api/1/databases/bilove/collections/Users?apiKey={0}", apiKey);
@@ -20,13 +32,13 @@ namespace BILoveModel
 
         public async Task<string> AddUser()
         {
-            string values = "{\"user\":\"test\"," +
+            string values = "{\"UserInfo\":\"test\"," +
                   "\"password\":\"bla\"}";
             var content = new StringContent(values, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
             {
-                var response = await client.PostAsync($"https://api.mlab.com/api/1/databases/bilove/collectio..{apiKey}", content);
+                var response = await client.PostAsync($"https://api.mlab.com/api/1/databases/bilove/collections/Users?apiKey={apiKey}", content);
                 var responseString = await response.Content.ReadAsStringAsync();
 
                 return responseString;

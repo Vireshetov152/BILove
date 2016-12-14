@@ -146,6 +146,12 @@
   <ItemGroup>
     <Resource Include="Pictures\travelling_color.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BILoveModel\BILoveModel.csproj">
+      <Project>{7b25e3fa-7ec0-4834-b289-e2a2e46191f4}</Project>
+      <Name>BILoveModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

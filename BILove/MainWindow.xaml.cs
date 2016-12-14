@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BILoveModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -100,9 +101,12 @@ namespace BILove
             AddCategory("Food", "food", foodImage);
         }
 
-        private void sendResults(object sender, RoutedEventArgs e)
+        private async void sendResults(object sender, RoutedEventArgs e)
         {
-
+            InternetManager im = new InternetManager();
+            im.GetInterests(results);
+            var response = await im.AddUser();
+            MessageBox.Show(response);
         }
     }
 }

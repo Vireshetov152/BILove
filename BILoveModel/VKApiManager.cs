@@ -10,8 +10,7 @@ namespace BILoveModel
 {
     public class VKApiManager
     {
-        Dictionary<string, string> infoDict = new Dictionary<string, string>();
-        public Dictionary<string, string> VKAuthorization(string login, string password)
+        public void VKAuthorization(string login, string password)
         {
             ulong appID = 5764856;                      
             string email = login;         
@@ -31,12 +30,8 @@ namespace BILoveModel
             var userName = user.FirstName + " " + user.LastName;
             var userPhotoUrl = user.Photo100.OriginalString;
 
-            infoDict.Add("userName", userName);
-            infoDict.Add("userPhoto", userPhotoUrl);
-
-            Console.WriteLine(infoDict["userPhoto"]);
-            
-            return infoDict;
+            var im = new InternetManager();
+            im.GetVKInfo(userName, userPhotoUrl);
         }   
     }
 }
