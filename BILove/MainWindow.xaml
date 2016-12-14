@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BILove"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="BILove" Height="800" Width="900">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -26,79 +25,103 @@
                 and we'll find a couple for you!!!</TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0" Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0" Background="Transparent" BorderThickness="0" Click="chooseSports">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image x:Name="SportsImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/sports.png"/>
+                    <Image x:Name="sportsImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/sports.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Sports</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="2">
-            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseDancing">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/dancing.png"/>
+                    <Image x:Name="dancingImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/dancing.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Dancing</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="3">
-            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseMusic">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/music.png"/>
+                    <Image x:Name="musicImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/music.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Music</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="4">
-            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseShopping">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/shopping.png"/>
+                    <Image x:Name="shoppingImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/shopping.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Shopping</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseTravelling">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/travelling.png"/>
+                    <Image x:Name="travellingImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/travelling.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Travelling</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseScience">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/science.png"/>
+                    <Image x:Name="scienceImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/science.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Science</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseMusic">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/science.png"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="20">Science</TextBlock>
+                    <Image x:Name="foodImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/food.png"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="20">Food</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="4" Grid.Column="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseGambling">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/science.png"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="20">Science</TextBlock>
+                    <Image x:Name="gamblingImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/gambling.png"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="20">Gambling</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0" Click="chooseGames">
+                <StackPanel Height="80" Width="200" Orientation="Horizontal">
+                    <Image x:Name="gamesImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="60" Source="/Pictures/games.png"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="20">Games</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="2">
-            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0">
+            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0" Click="choosePhoto">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
-                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="80" Source="/Pictures/science.png"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="20">Science</TextBlock>
+                    <Image x:Name="photoImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="60" Source="/Pictures/photography.png"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="20">Photo</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="2">
+            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0" Click="chooseIT">
+                <StackPanel Height="80" Width="200" Orientation="Horizontal">
+                    <Image x:Name="ITImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/technology.png"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="20">IT</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="2">
+            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0" Click="chooseArt">
+                <StackPanel Height="80" Width="200" Orientation="Horizontal">
+                    <Image x:Name="artImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/art.png"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="20">Art</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.ColumnSpan="3">
-            <Button Height="30" Width="100" VerticalAlignment="Center">Find Couple</Button>
+            <Button Height="40" Width="200" VerticalAlignment="Center" FontSize="20" Click="sendResults">Find Couple</Button>
         </StackPanel>
     </Grid>
 </Window>

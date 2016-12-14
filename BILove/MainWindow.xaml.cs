@@ -20,9 +20,71 @@ namespace BILove
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+            //sportsImage.Source = new BitmapImage(new Uri(@"/Pictures/sports_color.png", UriKind.Relative));
+        }
+
+        private void chooseSports(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseTravelling(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseGames(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseDancing(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseScience(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void choosePhoto(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseMusic(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseIT(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseShopping(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseGambling(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseArt(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sendResults(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
