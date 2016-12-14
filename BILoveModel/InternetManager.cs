@@ -26,8 +26,7 @@ namespace BILoveModel
 
             using (var client = new HttpClient())
             {
-                var response = await client.PostAsync(string.Format("https://api.mlab.com/api/1/databases/bilove/collections/Users?apiKey={0}", apiKey), content);
-
+                var response = await client.PostAsync($"https://api.mlab.com/api/1/databases/bilove/collectio..{apiKey}", content);
                 var responseString = await response.Content.ReadAsStringAsync();
 
                 return responseString;

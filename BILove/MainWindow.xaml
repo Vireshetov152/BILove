@@ -6,6 +6,25 @@
         xmlns:local="clr-namespace:BILove"
         mc:Ignorable="d"
         Title="BILove" Height="800" Width="900">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="Blue" BorderThickness="1">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -25,7 +44,7 @@
                 and we'll find a couple for you!!!</TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0" Background="Transparent" BorderThickness="0" Click="chooseSports">
+            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0" Click="chooseSports">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="sportsImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/sports.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Sports</TextBlock>
@@ -33,7 +52,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="2">
-            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseDancing">
+            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0" Click="chooseDancing">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="dancingImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/dancing.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Dancing</TextBlock>
@@ -41,7 +60,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="3">
-            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseMusic">
+            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0" Click="chooseMusic">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="musicImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/music.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Music</TextBlock>
@@ -49,23 +68,23 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="4">
-            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseShopping">
+            <Button Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,5,0" Click="chooseShopping">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="shoppingImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/shopping.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Shopping</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseTravelling">
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0" Click="chooseTravelling">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="travellingImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/travelling.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Travelling</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseScience">
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0" Click="chooseScience">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="scienceImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/science.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Science</TextBlock>
@@ -73,23 +92,23 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseMusic">
+            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0" Click="chooseFood">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="foodImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/food.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Food</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
-        <StackPanel Grid.Row="4" Grid.Column="1">
-            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Click="chooseGambling">
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0" Click="chooseGambling">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="gamblingImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/gambling.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Gambling</TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="2">
-            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0" Click="chooseGames">
+        <StackPanel Grid.Row="4" Grid.Column="1">
+            <Button Height="80" Width="200" HorizontalAlignment="Center" Margin="5,0,5,0" Click="chooseGames">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="gamesImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="60" Source="/Pictures/games.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Games</TextBlock>
@@ -97,7 +116,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="2">
-            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0" Click="choosePhoto">
+            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0" Click="choosePhoto">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="photoImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="60" Source="/Pictures/photography.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Photo</TextBlock>
@@ -105,7 +124,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="2">
-            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0" Click="chooseIT">
+            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0" Click="chooseIT">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="ITImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/technology.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">IT</TextBlock>
@@ -113,7 +132,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="4" Grid.Column="2">
-            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"  Background="Transparent" BorderThickness="0" Click="chooseArt">
+            <Button Height="80" Width="200" HorizontalAlignment="Left" Margin="5,0,0,0" Click="chooseArt">
                 <StackPanel Height="80" Width="200" Orientation="Horizontal">
                     <Image x:Name="artImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="70" Source="/Pictures/art.png"/>
                     <TextBlock VerticalAlignment="Center" FontSize="20">Art</TextBlock>
@@ -121,7 +140,8 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.ColumnSpan="3">
-            <Button Height="40" Width="200" VerticalAlignment="Center" FontSize="20" Click="sendResults">Find Couple</Button>
+            <Button Height="40" Width="200" VerticalAlignment="Center" FontSize="20" Foreground="Wheat" Background="Blue" Click="sendResults">Find Couple</Button>
         </StackPanel>
     </Grid>
 </Window>
+    

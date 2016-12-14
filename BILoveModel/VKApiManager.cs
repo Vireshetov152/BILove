@@ -10,6 +10,7 @@ namespace BILoveModel
 {
     public class VKApiManager
     {
+        Dictionary<string, string> infoDict = new Dictionary<string, string>();
         public Dictionary<string, string> VKAuthorization(string login, string password)
         {
             ulong appID = 5764856;                      
@@ -25,8 +26,6 @@ namespace BILoveModel
                 Password = pass,
                 Settings = scope
             });
-
-            var infoDict = new Dictionary<string, string>();
 
             var user = vk.Users.Get(vk.UserId.Value, ProfileFields.All);
             var userName = user.FirstName + " " + user.LastName;
