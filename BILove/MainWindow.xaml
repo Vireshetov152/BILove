@@ -140,7 +140,25 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.ColumnSpan="3" Margin="0 10 0 0">
-            <Button Height="40" Width="200" VerticalAlignment="Center" FontSize="20" Foreground="White" Background="Blue" Click="sendResults">Find Couple</Button>
+            <Button Height="40" Width="200" VerticalAlignment="Center" FontSize="20" Foreground="White" Background="Blue" Click="sendResults" Content="Find Couple">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="SkyBlue"  BorderBrush="Blue" BorderThickness="1">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

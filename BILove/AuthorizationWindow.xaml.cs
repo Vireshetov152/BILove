@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BILoveModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,23 @@ namespace BILove
         public AuthorizationWindow()
         {
             InitializeComponent();
+        }
+
+        private void Authorize(object sender, RoutedEventArgs e)
+        {
+            var vkApi = new VKApiManager();
+            try
+            {
+                vkApi.VKAuthorization(login.Text, password.Password);
+                //Properties.Settings.Default.Authorized = true;
+                //Properties.Settings.Default.Save();
+                var main = new MainWindow();
+                this.Close();
+                main.Show();
+            } catch
+            {
+                MessageBox.Show("Enter correct login and password");
+            }
         }
     }
 }

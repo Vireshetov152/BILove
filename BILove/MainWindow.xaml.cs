@@ -103,9 +103,8 @@ namespace BILove
 
         private void sendResults(object sender, RoutedEventArgs e)
         {
-            InternetManager im = new InternetManager();
-            im.GetInterests(results);
-            im.AddUser();
+            InternetManager.Instance.GetInterests(results);
+            InternetManager.Instance.AddUser();
         }
     }
 }

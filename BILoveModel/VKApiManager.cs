@@ -30,8 +30,7 @@ namespace BILoveModel
             var userName = user.FirstName + " " + user.LastName;
             var userPhotoUrl = user.Photo100.OriginalString;
 
-            var im = new InternetManager();
-            im.GetVKInfo(userName, userPhotoUrl);
+            InternetManager.Instance.GetVKInfo(new List<string> { userName, userPhotoUrl });
         }   
     }
 }

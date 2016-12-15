@@ -15,8 +15,7 @@ namespace BILove
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            var identity = 2;
-            if (identity == 2)
+            if (BILove.Properties.Settings.Default.Authorized != true)
             {
                 AuthorizationWindow login = new AuthorizationWindow();
                 login.Show();

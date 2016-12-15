@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BILove"
         mc:Ignorable="d"
-        Title="Authorization" Height="300" Width="300">
+        Title="Authorization" Height="500" Width="400">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="18">To find a couple <LineBreak/>authorize to your VK account</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock HorizontalAlignment="Center" Margin="0 10 0 0" TextAlignment="Center" FontSize="12">Phone or e-mail</TextBlock>
+            <TextBox x:Name="login" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0 5 0 0" Width="200" Height="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock HorizontalAlignment="Center" Margin="0 10 0 0" TextAlignment="Center" FontSize="12">Password</TextBlock>
+            <PasswordBox x:Name="password" HorizontalAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Margin="0 5 0 0" Width="200" Height="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" VerticalAlignment="Center">
+            <Button Click="Authorize" Width="200" Height="40" Background="Blue" Foreground="White">Authorize</Button>
+        </StackPanel>
     </Grid>
 </Window>

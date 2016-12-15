@@ -14,22 +14,33 @@ namespace BILoveModel
         private const string apiKey = "zK7bftiQKXwBOYZsIFIpiOfc_xuzBWDb";
         private Dictionary<string, string> infoDict = new Dictionary<string, string>();
 
-        // Getting user info vk and 'interests page'
-        public void GetInterests(List<string> interests) 
+        // Singleton pattern to initialize infoDict only once
+        private static InternetManager instance = null;
+        public static InternetManager Instance
         {
+            get
+            {
+                if (instance == null)
+                    instance = new InternetManager();
+                return instance;
+            }
+        }
+
+        // Getting user info from vk and 'interests page'
+        public void GetInterests(List<string> interests)
+        { 
             infoDict.Add("interests", string.Join(",", interests.ToArray()));
         }
 
-        public void GetVKInfo(string name, string photoUrl)
+        public void GetVKInfo(List<string> userInfo)
         {
-            infoDict.Add("userName", name);
-            infoDict.Add("userPhoto", photoUrl);
+            infoDict.Add("userName", userInfo[0]);
+            infoDict.Add("userPhoto", userInfo[1]);
         }
 
         public async void AddUser()
         {
-            string values = "{\"UserInfo\":\"test\"," +
-                  "\"Interests\":\""+ infoDict["interests"] +"\",\"IsBusy\":\"0\"}";
+            string values = "{\"UserName\":\"" + infoDict["userName"] + "\",\"UserPhotoUrl\":\"" + infoDict["userPhoto"] + "\",\"Interests\":\"" + infoDict["interests"] + "\",\"IsBusy\":\"0\"}";
             var content = new StringContent(values, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
