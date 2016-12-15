@@ -64,8 +64,23 @@ namespace BILoveModel
                     UserName = item.UserName,
                     UserPhotoUrl = item.UserPhotoUrl,
                     Interests = item.Interests.Split(',').ToList(),
+                    IsBusy = int.Parse(item.IsBusy),
+                    UserId = int.Parse(item._id.id)
                 }).ToList();
                 return result;
+            }
+        }
+
+        // Put request
+        public async void ChangeUserData(User user)
+        {
+            string values = "{\"UserName\":\"" + user.UserName + "\",\"UserPhotoUrl\":\"" + user.UserPhotoUrl + "\",\"Interests\":\"" + string.Join(",", user.Interests.ToArray()) + "\",\"IsBusy\":\"1\"}";
+            var content = new StringContent(values, Encoding.UTF8, "application/json");
+
+            using (var client = new HttpClient())
+            {
+                var response = await client.PutAsync($"https://api.mlab.com/api/1/databases/bilove/collections/Users/{user.UserId}?apiKey={apiKey}", content);
+                var responseString = await response.Content.ReadAsStringAsync();
             }
         }
     }

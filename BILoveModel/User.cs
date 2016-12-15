@@ -12,5 +12,7 @@ namespace BILoveModel
         public string UserName { get; set; }
         public string UserPhotoUrl { get; set; }
         public List<string> Interests { get; set; }
+        public int IsBusy { get; set; }
+        public int UserId { get; set; }
     }
 }
