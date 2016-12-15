@@ -25,24 +25,23 @@ namespace BILoveModel
             infoDict.Add("userName", name);
             infoDict.Add("userPhoto", photoUrl);
         }
-        static string GetUsers()
-        {
-            return string.Format("https://api.mlab.com/api/1/databases/bilove/collections/Users?apiKey={0}", apiKey);
-        }
 
-        public async Task<string> AddUser()
+        public async void AddUser()
         {
             string values = "{\"UserInfo\":\"test\"," +
-                  "\"password\":\"bla\"}";
+                  "\"Interests\":\""+ infoDict["interests"] +"\",\"IsBusy\":\"0\"}";
             var content = new StringContent(values, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
             {
                 var response = await client.PostAsync($"https://api.mlab.com/api/1/databases/bilove/collections/Users?apiKey={apiKey}", content);
                 var responseString = await response.Content.ReadAsStringAsync();
-
-                return responseString;
             }
+        }
+
+        static string GetUsers()
+        {
+            return string.Format("https://api.mlab.com/api/1/databases/bilove/collections/Users?apiKey={0}", apiKey);
         }
     }
 }

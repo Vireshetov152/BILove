@@ -13,12 +13,6 @@ namespace BILoveModel
             //VKApiManager m = new VKApiManager();
             //m.VKAuthorization("", "");
 
-            InternetManager im = new InternetManager();
-            Task.Run(async () =>
-            {
-                string x = await im.AddUser();
-                Console.WriteLine(x);
-            }).Wait();
             
         }
     }

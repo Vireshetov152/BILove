@@ -50,3 +50,5 @@ C:\Users\Никита\Desktop\TeamProject\BILove\BILove\obj\Debug\BILove.csproj.
 \\Mac\Home\Desktop\Project\BILove\BILove\obj\Debug\BILove.g.resources
 \\Mac\Home\Desktop\Project\BILove\BILove\obj\Debug\BILove.Properties.Resources.resources
 \\Mac\Home\Desktop\Project\BILove\BILove\obj\Debug\BILove.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\Project\BILove\BILove\obj\Debug\AuthorizationWindow.g.cs
+\\Mac\Home\Desktop\Project\BILove\BILove\obj\Debug\AuthorizationWindow.baml

@@ -13,5 +13,19 @@ namespace BILove
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            var identity = 2;
+            if (identity == 2)
+            {
+                AuthorizationWindow login = new AuthorizationWindow();
+                login.Show();
+            }
+            else
+            {
+                MainWindow mainView = new MainWindow();
+                mainView.Show();
+            }
+        }
     }
 }

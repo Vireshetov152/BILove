@@ -101,12 +101,11 @@ namespace BILove
             AddCategory("Food", "food", foodImage);
         }
 
-        private async void sendResults(object sender, RoutedEventArgs e)
+        private void sendResults(object sender, RoutedEventArgs e)
         {
             InternetManager im = new InternetManager();
             im.GetInterests(results);
-            var response = await im.AddUser();
-            MessageBox.Show(response);
+            im.AddUser();
         }
     }
 }
