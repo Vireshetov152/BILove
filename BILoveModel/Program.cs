@@ -8,12 +8,20 @@ namespace BILoveModel
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            //VKApiManager m = new VKApiManager();
-            //m.VKAuthorization("", "");
-
-            
+            try
+            {
+                Task.Run(async () =>
+                {
+                    List<User> list = await InternetManager.Instance.GetUsers();
+                }).Wait();
+            } catch(AggregateException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.ReadKey();
         }
     }
 }

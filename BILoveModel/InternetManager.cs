@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using BILoveModel.DTO;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,7 @@ namespace BILoveModel
             infoDict.Add("userPhoto", userInfo[1]);
         }
 
+        // Post request
         public async void AddUser()
         {
             string values = "{\"UserName\":\"" + infoDict["userName"] + "\",\"UserPhotoUrl\":\"" + infoDict["userPhoto"] + "\",\"Interests\":\"" + infoDict["interests"] + "\",\"IsBusy\":\"0\"}";
@@ -50,9 +52,21 @@ namespace BILoveModel
             }
         }
 
-        static string GetUsers()
+        // Get request
+        public async Task<List<User>> GetUsers()
         {
-            return string.Format("https://api.mlab.com/api/1/databases/bilove/collections/Users?apiKey={0}", apiKey);
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetStringAsync($"https://api.mlab.com/api/1/databases/bilove/collections/Users?apiKey={apiKey}");
+                var data = JsonConvert.DeserializeObject<List<ResultItem>>(response);
+                var result = data.Select(item => new User
+                {
+                    UserName = item.UserName,
+                    UserPhotoUrl = item.UserPhotoUrl,
+                    Interests = item.Interests.Split(',').ToList(),
+                }).ToList();
+                return result;
+            }
         }
     }
 }
