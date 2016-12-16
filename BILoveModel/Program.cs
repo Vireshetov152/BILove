@@ -11,11 +11,14 @@ namespace BILoveModel
 
         static void Main(string[] args)
         {
+            var req = new Requests();
+            var f = new CoupleFinder();
             try
             {
                 Task.Run(async () =>
                 {
-                    List<User> list = await InternetManager.Instance.GetUsers();
+                    List<User> list = await req.GetUsers();
+                    //var x = await f.FindMyself();
                 }).Wait();
             } catch(AggregateException e)
             {

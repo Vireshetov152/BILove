@@ -101,10 +101,29 @@ namespace BILove
             AddCategory("Food", "food", foodImage);
         }
 
-        private void sendResults(object sender, RoutedEventArgs e)
+        private async void sendResults(object sender, RoutedEventArgs e)
         {
             InternetManager.Instance.GetInterests(results);
-            InternetManager.Instance.AddUser();
+
+            Properties.Settings.Default.InterestsAreChosen = true;
+            Properties.Settings.Default.Save();
+
+            var req = new Requests();
+            req.AddUser();
+
+            var cf = new CoupleFinder();
+            try
+            {
+                var couple = await cf.FindCouple();
+                MessageBox.Show(couple.UserName);
+                var resultsWindow = new ResultsWindow();
+                resultsWindow.Show();
+            } 
+            catch
+            {
+                MessageBox.Show("Try again later");
+            }
+            this.Close();
         }
     }
 }

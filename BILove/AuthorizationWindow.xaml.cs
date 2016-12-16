@@ -31,8 +31,9 @@ namespace BILove
             try
             {
                 vkApi.VKAuthorization(login.Text, password.Password);
-                //Properties.Settings.Default.Authorized = true;
-                //Properties.Settings.Default.Save();
+                Properties.Settings.Default.UserName = InternetManager.Instance.InfoDict["userName"];
+                Properties.Settings.Default.UserPhotoUrl = InternetManager.Instance.InfoDict["userPhoto"];
+                Properties.Settings.Default.Save();
                 var main = new MainWindow();
                 this.Close();
                 main.Show();

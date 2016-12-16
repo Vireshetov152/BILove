@@ -56,8 +56,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoupleFinder.cs" />
     <Compile Include="DTO\ResultItem.cs" />
     <Compile Include="InternetManager.cs" />
+    <Compile Include="Requests.cs" />
     <Compile Include="User.cs" />
     <Compile Include="VKApiManager.cs" />
     <Compile Include="Program.cs" />

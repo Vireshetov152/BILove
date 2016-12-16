@@ -25,13 +25,37 @@ namespace BILove.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Authorized {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserName {
             get {
-                return ((bool)(this["Authorized"]));
+                return ((string)(this["UserName"]));
             }
             set {
-                this["Authorized"] = value;
+                this["UserName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool InterestsAreChosen {
+            get {
+                return ((bool)(this["InterestsAreChosen"]));
+            }
+            set {
+                this["InterestsAreChosen"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserPhotoUrl {
+            get {
+                return ((string)(this["UserPhotoUrl"]));
+            }
+            set {
+                this["UserPhotoUrl"] = value;
             }
         }
     }

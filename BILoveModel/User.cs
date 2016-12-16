@@ -13,6 +13,6 @@ namespace BILoveModel
         public string UserPhotoUrl { get; set; }
         public List<string> Interests { get; set; }
         public int IsBusy { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
     }
 }
