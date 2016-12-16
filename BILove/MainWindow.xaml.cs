@@ -105,23 +105,27 @@ namespace BILove
         {
             InternetManager.Instance.GetInterests(results);
 
-            Properties.Settings.Default.InterestsAreChosen = true;
-            Properties.Settings.Default.Save();
-
-            var req = new Requests();
-            req.AddUser();
+            if (results.Count() >= 3)
+            {
+                var req = new Requests();
+                req.AddUser();
+                Properties.Settings.Default.InterestsAreChosen = true;
+                Properties.Settings.Default.Save();
+            } else
+            {
+                MessageBox.Show("Choose at least 3 interests");
+            }
 
             var cf = new CoupleFinder();
             try
             {
                 var couple = await cf.FindCouple();
-                MessageBox.Show(couple.UserName);
                 var resultsWindow = new ResultsWindow();
                 resultsWindow.Show();
             } 
             catch
             {
-                MessageBox.Show("Try again later");
+                MessageBox.Show("Open app later.\nSoon you'll see your couple.");
             }
             this.Close();
         }

@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BILove"
         mc:Ignorable="d"
-        Title="ResultsWindow" Height="300" Width="300">
+        Title="ResultsWindow" Height="500" Width="500">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="24" Text="Here is your couple: "/>
+            <TextBlock x:Name="coupleNameTextBlock" HorizontalAlignment="Center" TextAlignment="Center" FontStyle="Italic" FontSize="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Image x:Name="coupleImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200" Source="/Pictures/science.png"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Margin="0 30 0 0">
+            <Button Height="40" Width="200" VerticalAlignment="Center" FontSize="20" Foreground="White" Background="Blue" Content="Share Result">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="SkyBlue"  BorderBrush="Blue" BorderThickness="1">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
