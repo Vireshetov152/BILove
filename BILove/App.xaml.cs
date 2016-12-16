@@ -34,6 +34,7 @@ namespace BILove
                 InternetManager.Instance.InfoDict["userPhoto"] = BILove.Properties.Settings.Default.UserPhotoUrl;
                 var resultsWindow = new ResultsWindow();
                 resultsWindow.Show();
+                BILove.Properties.Settings.Default.Reset();
             }
         }
     }
