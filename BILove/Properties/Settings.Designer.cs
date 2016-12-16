@@ -58,5 +58,17 @@ namespace BILove.Properties {
                 this["UserPhotoUrl"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CoupleName {
+            get {
+                return ((string)(this["CoupleName"]));
+            }
+            set {
+                this["CoupleName"] = value;
+            }
+        }
     }
 }

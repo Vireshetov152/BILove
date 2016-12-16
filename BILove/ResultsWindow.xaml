@@ -14,13 +14,13 @@
         </Grid.RowDefinitions>
         <StackPanel VerticalAlignment="Center">
             <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="24" Text="Here is your couple: "/>
-            <TextBlock x:Name="coupleNameTextBlock" HorizontalAlignment="Center" TextAlignment="Center" FontStyle="Italic" FontSize="30"/>
+            <TextBlock x:Name="coupleNameTextBlock" HorizontalAlignment="Center" TextAlignment="Center" FontStyle="Italic" FontSize="30" Text="Wait a while longer"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <Image x:Name="coupleImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200" Source="/Pictures/science.png"/>
+            <Image x:Name="coupleImage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Margin="0 30 0 0">
-            <Button Height="40" Width="200" VerticalAlignment="Center" FontSize="20" Foreground="White" Background="Blue" Content="Share Result">
+            <Button Height="40" Width="200" VerticalAlignment="Center" FontSize="20" Foreground="White" Background="Blue" Content="OK" Click="OK">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Style.Triggers>

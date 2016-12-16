@@ -30,9 +30,10 @@ namespace BILove
             }
             else
             {
+                InternetManager.Instance.InfoDict["userName"] = BILove.Properties.Settings.Default.UserName;
+                InternetManager.Instance.InfoDict["userPhoto"] = BILove.Properties.Settings.Default.UserPhotoUrl;
                 var resultsWindow = new ResultsWindow();
                 resultsWindow.Show();
-                BILove.Properties.Settings.Default.Reset();
             }
         }
     }
