@@ -17,8 +17,8 @@ namespace BILoveModel
                 .Where(pair => pair.Interests.Intersect(me.Interests).Count() >= 3 && pair.IsBusy == 0 && pair.UserName != me.UserName)
                 .ToList()[0];
 
-            req.ChangeUserData(me);
-            req.ChangeUserData(couple);
+            req.UpdateUserData(me);
+            req.UpdateUserData(couple);
 
             return couple;
         }

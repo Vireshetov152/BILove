@@ -16,7 +16,7 @@ namespace BILove
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            if (String.IsNullOrEmpty(BILove.Properties.Settings.Default.UserName))
+            if (string.IsNullOrEmpty(BILove.Properties.Settings.Default.UserName))
             {
                 var login = new AuthorizationWindow();
                 login.Show();

@@ -46,7 +46,7 @@ namespace BILoveModel
         }
 
         // Put request
-        public async void ChangeUserData(User user)
+        public async void UpdateUserData(User user)
         {
             string values = "{\"UserName\":\"" + user.UserName + "\",\"UserPhotoUrl\":\"" + user.UserPhotoUrl + "\",\"Interests\":\"" + string.Join(",", user.Interests.ToArray()) + "\",\"IsBusy\":\"1\"}";
             var content = new StringContent(values, Encoding.UTF8, "application/json");
