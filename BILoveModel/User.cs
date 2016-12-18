@@ -14,5 +14,7 @@ namespace BILoveModel
         public List<string> Interests { get; set; }
         public int IsBusy { get; set; }
         public string UserId { get; set; }
+        public string CoupleName { get; set; }
+        public string IsMale { get; set; }
     }
 }

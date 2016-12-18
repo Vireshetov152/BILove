@@ -70,5 +70,17 @@ namespace BILove.Properties {
                 this["CoupleName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string IsMale {
+            get {
+                return ((string)(this["IsMale"]));
+            }
+            set {
+                this["IsMale"] = value;
+            }
+        }
     }
 }

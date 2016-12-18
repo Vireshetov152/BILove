@@ -18,21 +18,21 @@ namespace BILove
         {
             if (string.IsNullOrEmpty(BILove.Properties.Settings.Default.UserName))
             {
-                var login = new AuthorizationWindow();
+                var login = WindowsFactory.Default.GetAuthorizationWindow();
                 login.Show();
             }
             else if (BILove.Properties.Settings.Default.InterestsAreChosen != true)
             {
                 InternetManager.Instance.InfoDict["userName"] = BILove.Properties.Settings.Default.UserName;
                 InternetManager.Instance.InfoDict["userPhoto"] = BILove.Properties.Settings.Default.UserPhotoUrl;
-                var mainView = new MainWindow();
+                var mainView = WindowsFactory.Default.GetMainWindow();
                 mainView.Show();
             }
             else
             {
                 InternetManager.Instance.InfoDict["userName"] = BILove.Properties.Settings.Default.UserName;
                 InternetManager.Instance.InfoDict["userPhoto"] = BILove.Properties.Settings.Default.UserPhotoUrl;
-                var resultsWindow = new ResultsWindow();
+                var resultsWindow = WindowsFactory.Default.GetResultsWindow();
                 resultsWindow.Show();
                 BILove.Properties.Settings.Default.Reset();
             }

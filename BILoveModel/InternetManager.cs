@@ -41,6 +41,7 @@ namespace BILoveModel
         {
             infoDict.Add("userName", userInfo[0]);
             infoDict.Add("userPhoto", userInfo[1]);
+            infoDict.Add("isMale", userInfo[2]);
         }
     }
 }

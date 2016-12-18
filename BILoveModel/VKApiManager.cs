@@ -28,9 +28,10 @@ namespace BILoveModel
 
             var user = vk.Users.Get(vk.UserId.Value, ProfileFields.All);
             var userName = user.FirstName + " " + user.LastName;
+            var isMale = user.Sex == VkNet.Enums.Sex.Male ? "1" : "0";
             var userPhotoUrl = user.Photo100.OriginalString;
 
-            InternetManager.Instance.GetVKInfo(new List<string> { userName, userPhotoUrl });
+            InternetManager.Instance.GetVKInfo(new List<string> { userName, userPhotoUrl, isMale });
         }   
     }
 }

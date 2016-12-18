@@ -106,12 +106,12 @@ namespace BILove
             if (results.Count() >= 3)
             {
                 InternetManager.Instance.GetInterests(results);
-                var req = new Requests();
+                var req = LogicClassesFactory.Default.GetRequests();
                 req.AddUser();
                 Properties.Settings.Default.InterestsAreChosen = true;
                 Properties.Settings.Default.Save();
-                var cf = new CoupleFinder();
-                var resultsWindow = new ResultsWindow();
+                var cf = LogicClassesFactory.Default.GetCoupleFinder();
+                var resultsWindow = WindowsFactory.Default.GetResultsWindow();
                 resultsWindow.Show();
                 this.Close();
             } else

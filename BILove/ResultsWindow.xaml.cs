@@ -27,7 +27,7 @@ namespace BILove
         }
         public async void GetCouple()
         {
-            var cf = new CoupleFinder();
+            var cf = LogicClassesFactory.Default.GetCoupleFinder();
             User couple;
             try
             {

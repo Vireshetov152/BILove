@@ -16,7 +16,7 @@ namespace BILoveModel
         // Post request
         public async void AddUser()
         {
-            string values = "{\"UserName\":\"" + InternetManager.Instance.InfoDict["userName"] + "\",\"UserPhotoUrl\":\"" + InternetManager.Instance.InfoDict["userPhoto"] + "\",\"Interests\":\"" + InternetManager.Instance.InfoDict["interests"] + "\",\"IsBusy\":\"0\"}";
+            string values = "{\"UserName\":\"" + InternetManager.Instance.InfoDict["userName"] + "\",\"UserPhotoUrl\":\"" + InternetManager.Instance.InfoDict["userPhoto"] + "\",\"Interests\":\"" + InternetManager.Instance.InfoDict["interests"] + "\",\"IsBusy\":\"0\",\"CoupleName\":\"\",\"IsMale\":\"" + InternetManager.Instance.InfoDict["isMale"] + "\"}";
             var content = new StringContent(values, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
@@ -39,6 +39,8 @@ namespace BILoveModel
                     UserPhotoUrl = item.UserPhotoUrl,
                     Interests = item.Interests.Split(',').ToList(),
                     IsBusy = int.Parse(item.IsBusy),
+                    CoupleName = item.CoupleName,
+                    IsMale = item.IsMale,
                     UserId = item._id.id
                 }).ToList();
                 return result;
@@ -46,9 +48,9 @@ namespace BILoveModel
         }
 
         // Put request
-        public async void UpdateUserData(User user)
+        public async void UpdateUserData(User user, User couple)
         {
-            string values = "{\"UserName\":\"" + user.UserName + "\",\"UserPhotoUrl\":\"" + user.UserPhotoUrl + "\",\"Interests\":\"" + string.Join(",", user.Interests.ToArray()) + "\",\"IsBusy\":\"1\"}";
+            string values = "{\"UserName\":\"" + user.UserName + "\",\"UserPhotoUrl\":\"" + user.UserPhotoUrl + "\",\"Interests\":\"" + string.Join(",", user.Interests.ToArray()) + "\",\"IsBusy\":\"1\",\"CoupleName\":\"" + couple.UserName + "\",\"IsMale\":\"" + user.IsMale + "\"}";
             var content = new StringContent(values, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())

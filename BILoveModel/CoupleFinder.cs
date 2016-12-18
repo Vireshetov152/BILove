@@ -8,17 +8,17 @@ namespace BILoveModel
 {
     public class CoupleFinder
     {
-        Requests req = new Requests();
+        Requests req = LogicClassesFactory.Default.GetRequests();
         public async Task<User> FindCouple()
         {
             var users = await req.GetUsers();
             var me = await FindMyself();
             var couple = users
-                .Where(pair => (pair.Interests.Intersect(me.Interests)).Count() >= 3 && pair.IsBusy == 0 && pair.UserName != me.UserName)
+                .Where(pair => (pair.Interests.Intersect(me.Interests)).Count() >= 3 && pair.IsBusy == 0 && pair.UserName != me.UserName && pair.IsMale != me.IsMale)
                 .ToList()[0];
 
-            req.UpdateUserData(me);
-            req.UpdateUserData(couple);
+            req.UpdateUserData(me, couple);
+            req.UpdateUserData(couple, me);
 
             return couple;
         }
