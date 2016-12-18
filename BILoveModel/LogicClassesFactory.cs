@@ -32,11 +32,6 @@ namespace BILoveModel
             return new CoupleFinder();
         }
 
-        public VKApiManager GetVKApiManager()
-        {
-            return new VKApiManager();
-        }
-
         public Requests GetRequests()
         {
             return new Requests();

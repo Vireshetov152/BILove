@@ -27,10 +27,9 @@ namespace BILove
 
         private void Authorize(object sender, RoutedEventArgs e)
         {
-            var vkApi = LogicClassesFactory.Default.GetVKApiManager();
             try
             {
-                vkApi.VKAuthorization(login.Text, password.Password);
+                VKApiManager.Instance.VKAuthorization(login.Text, password.Password);
                 Properties.Settings.Default.UserName = InternetManager.Instance.InfoDict["userName"];
                 Properties.Settings.Default.UserPhotoUrl = InternetManager.Instance.InfoDict["userPhoto"];
                 Properties.Settings.Default.Save();

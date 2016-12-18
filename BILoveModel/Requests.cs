@@ -16,7 +16,7 @@ namespace BILoveModel
         // Post request
         public async void AddUser()
         {
-            string values = "{\"UserName\":\"" + InternetManager.Instance.InfoDict["userName"] + "\",\"UserPhotoUrl\":\"" + InternetManager.Instance.InfoDict["userPhoto"] + "\",\"Interests\":\"" + InternetManager.Instance.InfoDict["interests"] + "\",\"IsBusy\":\"0\",\"CoupleName\":\"\",\"IsMale\":\"" + InternetManager.Instance.InfoDict["isMale"] + "\"}";
+            string values = "{\"UserName\":\"" + InternetManager.Instance.InfoDict["userName"] + "\",\"UserPhotoUrl\":\"" + InternetManager.Instance.InfoDict["userPhoto"] + "\",\"Interests\":\"" + InternetManager.Instance.InfoDict["interests"] + "\",\"IsBusy\":\"0\",\"CoupleName\":\"\",\"IsMale\":\"" + InternetManager.Instance.InfoDict["isMale"] + "\",\"PhotoId\":\"" + InternetManager.Instance.InfoDict["photoId"] + "\"}";
             var content = new StringContent(values, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
@@ -50,7 +50,7 @@ namespace BILoveModel
         // Put request
         public async void UpdateUserData(User user, User couple)
         {
-            string values = "{\"UserName\":\"" + user.UserName + "\",\"UserPhotoUrl\":\"" + user.UserPhotoUrl + "\",\"Interests\":\"" + string.Join(",", user.Interests.ToArray()) + "\",\"IsBusy\":\"1\",\"CoupleName\":\"" + couple.UserName + "\",\"IsMale\":\"" + user.IsMale + "\"}";
+            string values = "{\"UserName\":\"" + user.UserName + "\",\"UserPhotoUrl\":\"" + user.UserPhotoUrl + "\",\"Interests\":\"" + string.Join(",", user.Interests.ToArray()) + "\",\"IsBusy\":\"1\",\"CoupleName\":\"" + couple.UserName + "\",\"IsMale\":\"" + user.IsMale + "\",\"PhotoId\":\"" + user.PhotoId + "\"}";
             var content = new StringContent(values, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())

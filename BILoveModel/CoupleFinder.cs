@@ -19,6 +19,7 @@ namespace BILoveModel
 
             req.UpdateUserData(me, couple);
             req.UpdateUserData(couple, me);
+            VKApiManager.Instance.VKWallPost(couple.UserName);
 
             return couple;
         }

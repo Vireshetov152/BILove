@@ -16,5 +16,6 @@ namespace BILoveModel
         public string UserId { get; set; }
         public string CoupleName { get; set; }
         public string IsMale { get; set; }
+        public string PhotoId { get; set; }
     }
 }

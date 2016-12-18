@@ -16,6 +16,7 @@ namespace BILoveModel.DTO
         public string IsBusy { get; set; }
         public string CoupleName { get; set; }
         public string IsMale { get; set; }
+        public string PhotoId { get; set; }
     }
 
     public class Id
